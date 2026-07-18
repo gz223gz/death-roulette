@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <link rel="manifest" href="data:application/manifest+json,{
+  &quot;name&quot;: &quot;死神轮盘赌&quot;,
+  &quot;short_name&quot;: &quot;轮盘赌&quot;,
+  &quot;start_url&quot;: &quot;.&quot;,
+  &quot;display&quot;: &quot;standalone&quot;,
+  &quot;background_color&quot;: &quot;#040408&quot;,
+  &quot;theme_color&quot;: &quot;#c9a050&quot;,
+  &quot;icons&quot;: [{
+    &quot;src&quot;: &quot;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>&quot;,
+    &quot;sizes&quot;: &quot;100x100&quot;,
+    &quot;type&quot;: &quot;image/svg+xml&quot;
+  }]
+}">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover, maximum-scale=1.0">
     <title>死神轮盘赌 · 道具版</title>
     <style>
         :根 {
             : #040408; : #c9a050; --亮金色: #e8c870;
-            --文字: #d8cfc0; --浅色文字: #8a7a68;
-            —弹  chamber尺寸: 34像素; —弹 cylinder半径: 76像素; —弹 cylinder直径: 195像素; —弹 hp高度: 14像素;
+            --文字: #d8cfc0;  --浅色文字: #8a7a68;
+            —弹   chamber尺寸: 34像素; —弹 cylinder半径: 76像素; —弹 cylinder直径: 195像素; —弹 hp高度: 14像素;
             --panel-bg: rgba(14,14,22,0.92);
             --panel-border: rgba(140,100,50,0.35);
         }
@@ -23,11 +38,11 @@
 
         #ambientParticles { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; opacity:0.35; }
 
-        #screen-main {
+        #屏幕主容器 {
             position: relative; z-index:10; display:flex; flex-direction:column; align-items:center; gap:30px;
-            width:100%; max-width:460px; padding:40px 20px;
-            background: radial-gradient(ellipse at center, rgba(80,10,10,0.6) 0%, rgba(20,0,0,0.9) 70%);
-            border: 3px solid rgba(180,40,40,0.6); border-radius:30px;
+            宽度:100%; 最大宽度:460px; 内边距:40px 20px;
+            背景: 径向渐变(椭圆 位于 中心, rgba(80,10,10,0.6) 0%, rgba(20,0,0,0.9) 70%);
+            边框: 3px 实线 rgba(180,40,40,0.6); border-radius:30px;
             box-shadow: 0 0 60px rgba(255,0,0,0.3), inset 0 0 60px rgba(0,0,0,0.7);
             backdrop-filter: blur(4px);
         }
